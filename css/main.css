@@ -145,6 +145,11 @@ img {
     grid-gap: 0.5rem;
     background-color: var(--gundam-blue-dark);
   }
+  .home {
+    grid-area: home;
+    text-align: left;
+    padding-left: 0.5rem;
+  }
   html {
     margin: 0;
     text-align: center;
