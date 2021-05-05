@@ -1,0 +1,191 @@
+:root {
+  --gundam-red: hsl(8, 70%, 49%);
+  --gundam-blue: hsl(205, 55%, 45%);
+  --gundam-blue-dark: hsl(205, 55%, 25%);
+  --gundam-white: hsl(148, 21%, 88%);
+  --gundam-white-dark: hsl(148, 21%, 68%);
+  --gundam-yellow: hsl(43, 68%, 55%);
+}
+html {
+  font-size: 1.5rem;
+  background: linear-gradient(rgba(2, 0, 0, 0.6), rgba(255, 255, 255, 0.45)),
+    url(../images/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+body {
+}
+.title {
+  grid-area: title;
+  text-align: center;
+  font-family: fantasy, sans-serif;
+  font-style: italic;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.home {
+  grid-area: home;
+}
+.btn {
+  border: none;
+  color: var(--gundam-white);
+  cursor: pointer;
+}
+.search {
+  grid-area: search;
+  text-align: center;
+  color: var(--gundam-white);
+}
+.featured-title {
+  grid-area: featured-title;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: 900;
+  text-align: left;
+  color: var(--gundam-red);
+  font-style: italic;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-areas:
+    "home . ."
+    "title title title"
+    "search search search"
+    "featured-gunpla featured-gunpla featured-gunpla"
+    "featured-gunpla featured-gunpla featured-gunpla"
+    "featured-gunpla featured-gunpla featured-gunpla"
+    "featured-gunpla featured-gunpla featured-gunpla";
+  grid-gap: 0.5rem;
+  padding: 1rem;
+}
+.featured-gunpla {
+  grid-area: featured-gunpla;
+  display: grid;
+  grid-template-areas:
+    "featured-title featured-title featured-title"
+    "gunpla-first gunpla-second gunpla-third"
+    "gunpla-forth gunpla-fifth gunpla-sixth"
+    "gunpla-sevnth gunpla-eight gunpla-ninth";
+  grid-gap: 0.5rem;
+  background-color: var(--gundam-blue-dark);
+  padding: 1rem;
+}
+.gunpla {
+  text-align: center;
+  padding: 0rem;
+  align-content: center;
+  /* width: 300px;
+  height: 400px; */
+}
+img {
+  width: 100%;
+  height: auto;
+}
+@media all and (max-width: 800px) {
+  .main-grid {
+    display: grid;
+    grid-template-areas:
+      "home . ."
+      "title title title"
+      "search search search"
+      "featured-gunpla featured-gunpla featured-gunpla"
+      "featured-gunpla featured-gunpla featured-gunpla"
+      "featured-gunpla featured-gunpla featured-gunpla"
+      "featured-gunpla featured-gunpla featured-gunpla"
+      "featured-gunpla featured-gunpla featured-gunpla"
+      "featured-gunpla featured-gunpla featured-gunpla";
+    grid-gap: 0.5rem;
+    padding: 1rem;
+  }
+  .featured-gunpla {
+    grid-area: featured-gunpla;
+    display: grid;
+    grid-template-areas:
+      "featured-title featured-title"
+      "gunpla-first gunpla-second"
+      "gunpla-third gunpla-forth"
+      "gunpla-fifth gunpla-sixth"
+      "gunpla-sevnth gunpla-eight"
+      "gunpla-ninth .";
+    grid-gap: 0.5rem;
+    background-color: var(--gundam-blue-dark);
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-grid {
+    display: grid;
+    grid-template-areas:
+      "home"
+      "title"
+      "search"
+      "featured-gunpla";
+    grid-gap: 0.5rem;
+    padding: 0rem;
+    position: absolute;
+  }
+  .featured-gunpla {
+    grid-area: featured-gunpla;
+    display: grid;
+    grid-template-areas:
+      "featured-title"
+      "featured-title"
+      "gunpla-first"
+      "gunpla-second"
+      "gunpla-third"
+      "gunpla-forth"
+      "gunpla-fifth"
+      "gunpla-sixth"
+      "gunpla-sevnth"
+      "gunpla-eight"
+      "gunpla-ninth";
+    grid-gap: 0.5rem;
+    background-color: var(--gundam-blue-dark);
+  }
+  html {
+    margin: 0;
+    text-align: center;
+  }
+  body {
+    margin: 0;
+    text-align: center;
+  }
+  .title {
+    font-size: 0.5rem;
+    grid-area: title;
+    text-align: center;
+    font-family: fantasy, sans-serif;
+    font-style: italic;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+}
+.gunpla.first {
+  grid-area: gunpla-first;
+}
+.gunpla.second {
+  grid-area: gunpla-second;
+}
+.gunpla.third {
+  grid-area: gunpla-third;
+}
+.gunpla.forth {
+  grid-area: gunpla-forth;
+}
+.gunpla.fifth {
+  grid-area: gunpla-fifth;
+}
+.gunpla.sixth {
+  grid-area: gunpla-sixth;
+}
+.gunpla.sevnth {
+  grid-area: gunpla-sevnth;
+}
+.gunpla.eight {
+  grid-area: gunpla-eight;
+}
+.gunpla.ninth {
+  grid-area: gunpla-ninth;
+}
