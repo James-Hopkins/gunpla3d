@@ -1,7 +1,16 @@
 function createImageRotate(imgList) {
     var stage;
+    function fitToContainer(canvas){
+        // Make it visually fill the positioned parent
+        canvas.style.width ='100%';
+        canvas.style.height='100%';
+        // ...then set the internal size to match
+        canvas.width  = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
     function init() {
-        var canvas = document.getElementById("canvas");
+        // var canvas = document.getElementById("canvas");
+        fitToContainer(canvas)
         if (!canvas || !canvas.getContext) return;
 
         stage = new createjs.Stage(canvas);
@@ -19,10 +28,10 @@ function createImageRotate(imgList) {
         var bmp = new createjs.Bitmap();
         stage.addChild(bmp);
 
-        var myTxt = new createjs.Text("360 Car", '24px Ubuntu', "#ffffff");
-        myTxt.x = myTxt.y = 20;
-        myTxt.alpha = 0.08;
-        stage.addChild(myTxt);
+        // var myTxt = new createjs.Text("Gunpla 3D", '24px Ubuntu', "#ffffff");
+        // myTxt.x = myTxt.y = 20;
+        // myTxt.alpha = 0.08;
+        // stage.addChild(myTxt);
 
 
         function load360Image() {
@@ -35,7 +44,9 @@ function createImageRotate(imgList) {
         function img360Loaded(event) {
             loaded++;
             bg.graphics.clear()
-            bg.graphics.beginFill("#222").drawRect(0, 0, stage.canvas.width * loaded / totalFrames, stage.canvas.height);
+            bg.graphics
+                // .beginFill("#222")
+                .drawRect(0, 0, stage.canvas.width * loaded / totalFrames, stage.canvas.height);
             bg.graphics.endFill();
 
             if (loaded == totalFrames) start360();
