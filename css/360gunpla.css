@@ -1,11 +1,6 @@
-.threesixty-image-rotate .loading-spinner {
-  display: block;
-  position: absolute;
-  z-index: 10000;
-  background: #ffffff;
-  opacity: 0.5;
+.threesixty-image-rotate {
+  height: auto !important;
 }
-
 .threesixty-image-rotate .loading-spinner:after {
   background-image: url("../javascript/360view/images/icons/loading.gif");
 }

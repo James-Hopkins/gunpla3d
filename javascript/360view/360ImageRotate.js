@@ -12,13 +12,11 @@
             progress: ".spinner",                           // selector to show the loading progress
             extension: ".jpg",                              // extension for the images
             imgPrefix: "",
-            navigation: true,                               // display navigation
-            spinner: true,                                  // disable spinner for loading
             imagesFolder: "images/",                        // path to folder with images
             smallWidth: "100%",                                // smaller width for images
             smallHeight: "auto",                               // smaller height for images
             largeWidth: "100%",                                // larger width for images
-            largeHeight: "100%",                               // larger height for images
+            largeHeight: "auto",                               // larger height for images
             imagePlaceholderClass: "images-placeholder",    // class for images placeholder
             imgList: "threesixty-images-rotate"             // selector for image list
         }, options);
@@ -34,13 +32,7 @@
                 "position": "relative",
                 "margin": "auto"
             });
-            if (settings.spinner) {
-                base.spinner("start");
-            }
             this.loadImages();
-            if (settings.navigation) {
-                base.createNavigation();
-            }
             let changeSlide = false, previousSlide = false, nextNext = false, xAxis, nextXAxis;
             base.find(".images-list").on("mousedown touchstart", function (e) {
                 e.preventDefault();
@@ -103,118 +95,6 @@
             imagesDisplay.append(imagesList);
 
             base.append(imagesDisplay);
-        };
-        /**
-         * @method createNavigation
-         * Creates navigation menu for TreeSixtyImageRotate display
-         */
-        base.createNavigation = function () {
-            let navigationBarWrapper, navigationBar, next, previous, playStop, resize;
-
-            navigationBarWrapper = $("<div/>").attr("class", "navigation-bar-wrapper");
-
-            navigationBar = $("<div/>").attr("class", "navigation-bar");
-
-            next = $("<div/>").attr({
-                "class": "navigation-bar-next"
-            });
-
-            previous = $("<div/>").attr({
-                "class": "navigation-bar-previous"
-            });
-
-            playStop = $("<div/>").attr({
-                "class": "navigation-bar-play"
-            });
-
-            resize = $("<div/>").attr({
-                "class": "navigation-bar-resize"
-            });
-
-            navigationBar.append(previous);
-            navigationBar.append(playStop);
-            navigationBar.append(next);
-            navigationBar.append(resize);
-
-            navigationBarWrapper.append(navigationBar);
-
-            base.append(navigationBarWrapper);
-
-            let nextInterval;
-            next.on("mousedown touchstart", function (e) {
-                e.preventDefault();
-                nextInterval = setInterval(function () {
-                    base.next()
-                }, settings.speed)
-            }).on("mouseleave mouseup touchend", function () {
-                clearInterval(nextInterval);
-            });
-
-            let previousInterval;
-            previous.on("mousedown touchstart", function (e) {
-                e.preventDefault();
-                previousInterval = setInterval(function () {
-                    base.previous()
-                }, settings.speed)
-            }).on("mouseleave mouseup touchend", function () {
-                clearInterval(previousInterval);
-            });
-
-            let play = false, playStopInterval;
-            playStop.on("mousedown touchstart", function (e) {
-                e.preventDefault();
-                if (!play) {
-                    base.find('.navigation-bar-play').addClass('navigation-bar-stop');
-                    play = true;
-                    playStopInterval = setInterval(function () {
-                        base.next()
-                    }, settings.speed)
-                } else {
-                    base.find('.navigation-bar-play').removeClass('navigation-bar-stop');
-                    play = false;
-                    clearInterval(playStopInterval)
-                }
-            });
-            resize.on("mousedown touchstart", function (e) {
-                e.preventDefault();
-                base.togleFullScreen();
-                // base.resize();
-            });
-
-        };
-        /**
-         * @method spinner
-         * Creates loader to be display during content creation
-         * Also can hide loader depending on status
-         */
-        base.spinner = function (status) {
-            let spinner;
-            spinner = $("<div/>").attr({
-                "class": "loading-spinner"
-            });
-            base.append(spinner);
-            if (status === "start") {
-                let winWidth = $(window).width();
-                if (winWidth > 991) {
-                    base.find('.loading-spinner').css({
-                        "height": settings.smallHeight,
-                        "width": settings.smallWidth,
-                    })
-                } else {
-                    base.find('.loading-spinner').css({
-                        "max-height": settings.largeHeight,
-                        "max-width": settings.largeWidth,
-                        "height": winWidth,
-                        "width": winWidth,
-                    });
-                }
-            } else if (status === "stop") {
-                base.find('.loading-spinner').css({
-                    "display": "none"
-                });
-            } else {
-                console.log("Invalid status for spinner");
-            }
         };
         /**
          * @method next
@@ -287,7 +167,7 @@
             if (!$(document)[0].fullscreenElement &&
                 !$(document)[0].mozFullScreenElement && !$(document)[0].webkitFullscreenElement && !$(document)[0].msFullscreenElement) {
                 base.find('.images-display').css({
-                    "height": "100%",
+                    "height": "auto",
                     "width": "100%",
                     "margin": "auto"
                 });

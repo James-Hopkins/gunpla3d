@@ -14,8 +14,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../javascript/search.js"></script>
-    <script type="text/javascript" src="../javascript/360view/360ImageRotate.min.js"></script>
-    <!-- <script type="text/javascript" src="../javascript/360view/360ImageRotate.js"></script> -->
+    <!-- <script type="text/javascript" src="../javascript/360view/360ImageRotate.min.js"></script> -->
+    <script type="text/javascript" src="../javascript/360view/360ImageRotate.js"></script>
 </head>
 
 <body class="main-grid">
@@ -23,20 +23,18 @@
     <div class="home"><a href="../index.html" class="fa fa-home" style="color: var(--gundam-white)"></a></div>
     <!-- Search  -->
     <div class="search">
-        <label for="availableGundam">Search Available Gundam: </label>
+        <label for="availableGundam">Search Available Gunpla: </label>
         <br></br>
         <input id="availableGundam">
     </div>
     <!-- Title -->
-            <div class='title'>
-                <h1>
-                    Test Gunpla 00X34D
-                </h1>
-            </div>
-    <!-- Canvas -->
-    <div class="gunpla-content">
-        <div class="threesixty-image-rotate gunpla">
-        </div>
+    <div class='title'>
+        <h1 class='text'>
+            Test Gunpla 00X34D
+        </h1>
+    </div>
+    <!-- Gunpla -->
+    <div class="gunpla-content threesixty-image-rotate gunpla">
         <script type="text/javascript">
             // https://www.jqueryscript.net/other/360-product-view-rotate.html
             $('.gunpla').TreeSixtyImageRotate({
@@ -45,13 +43,13 @@
                 smallWidth: "100%",                                // smaller width for images
                 smallHeight: "auto",                               // smaller height for images
                 largeWidth: "100%",                                // larger width for images
-                largeHeight: "100%",  
+                largeHeight: "auto",  
                 extension: ".png"
             }).initTreeSixty();
         </script>
     </div>
     <!-- Credit -->
-    <h4>Credit goes to reddit user u/jimmyhop</h4>
+    <div class='credit'><h4>Credit goes to reddit user u/jimmyhop</h4></div>
 </body>
 
 </html>
