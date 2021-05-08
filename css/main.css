@@ -67,16 +67,12 @@ img {
   bottom: 0;
   background-color: var(--gundam-yellow);
   opacity: 0;
+  z-index: 2;
 }
 .text {
-  color: var(--gundam-red);
-  font-size: 1rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  color: var(--gundam-blue-dark);
+  font-size: 3rem;
+  position: relative;
   text-align: center;
 }
 .gunpla:hover .overlay {

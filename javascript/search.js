@@ -2,7 +2,7 @@
 $(function () {
     // $(document).tooltip();
     var availableGundam = [
-        { link: "./gunpla/test_gunpla.html", label: "AppleScript"},
+        { link: "./gunpla/test_gunpla.html", label: "RX-78-2 Gundam (Beyond Global), Bandai Spirits HG 1/144"},
         { link: "https://hopkins.irish", label: "Asp"},
         { link: "https://hopkins.irish", label: "BASIC"},
         { link: "https://hopkins.irish", label: "C"},

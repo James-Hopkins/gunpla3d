@@ -27,6 +27,9 @@ html {
 .credit {
   grid-area: credit;
   color: var(--gundam-yellow);
+  background-color: var(--gundam-blue);
+  text-align: center;
+  border: 1px solid black;
 }
 .gunpla-content {
   grid-area: gunpla-content;
@@ -43,7 +46,15 @@ html {
       "gunpla-content gunpla-content gunpla-content"
       "credit credit credit";
     grid-gap: 0.5rem;
-    padding: 1rem;
+    padding: 0rem;
+  }
+  html {
+    margin: 0;
+    text-align: center;
+  }
+  body {
+    margin: 0;
+    text-align: center;
   }
 }
 @media (max-width: 450px) {
