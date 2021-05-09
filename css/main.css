@@ -65,18 +65,23 @@ img {
   top: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gundam-yellow);
-  opacity: 0;
+  /* background-color: var(--gundam-yellow); */
+  /* opacity: 0; */
   z-index: 2;
+  background-color: hsla(43, 68%, 55%, 0);
 }
 .text {
-  color: var(--gundam-blue-dark);
-  font-size: 3rem;
+  color: hsla(205, 55%, 25%, 0);
+  font-size: calc(3vw + 3vh);
   position: relative;
   text-align: center;
 }
 .gunpla:hover .overlay {
-  opacity: 0.5;
+  background-color: hsla(223, 68%, 45%, 0.5);
+}
+
+.gunpla:hover .text {
+  color: hsla(223, 68%, 85%, 1);
 }
 
 @media all and (max-width: 800px) {
