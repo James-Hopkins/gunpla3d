@@ -14,8 +14,8 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="../javascript/search.js"></script>
-    <!-- <script type="text/javascript" src="../javascript/360view/360ImageRotate.min.js"></script> -->
-    <script type="text/javascript" src="../javascript/360view/360ImageRotate.js"></script>
+    <script type="text/javascript" src="../javascript/360view/360ImageRotate.min.js"></script>
+    <!-- <script type="text/javascript" src="../javascript/360view/360ImageRotate.js"></script> -->
 </head>
 
 <body class="main-grid">
@@ -34,19 +34,27 @@
         </h1>
     </div>
     <!-- Gunpla -->
-    <div class="gunpla-content threesixty-image-rotate gunpla">
-        <script type="text/javascript">
-            // https://www.jqueryscript.net/other/360-product-view-rotate.html
-            $('.gunpla').TreeSixtyImageRotate({
-                imagesFolder: "../images/test_gunpla/",
-                totalFrames: 5,
-                smallWidth: "100%",                                // smaller width for images
-                smallHeight: "auto",                               // smaller height for images
-                largeWidth: "100%",                                // larger width for images
-                largeHeight: "auto",  
-                extension: ".png"
-            }).initTreeSixty();
-        </script>
+    <div class="gunpla-content">
+        <div class="threesixty-image-rotate gunpla">
+            <script type="text/javascript">
+                // https://www.jqueryscript.net/other/360-product-view-rotate.html
+                $('.gunpla').TreeSixtyImageRotate({
+                    imagesFolder: "../images/beyond_global/",
+                    totalFrames: 31,
+                    smallWidth: "100%",                                // smaller width for images
+                    smallHeight: "auto",                               // smaller height for images
+                    largeWidth: "100%",                                // larger width for images
+                    largeHeight: "auto",  
+                    extension: ".png",
+                    speed: 31,
+                    dragSpeed: 10
+
+                }).initTreeSixty();
+            </script>
+        </div>
+        <img class="image image1" src="../images/beyond_global/gun_shield.jpg">
+        <img class="image image2" src="../images/beyond_global/reach_behind.jpg">
+        <img class="image image3" src="../images/beyond_global/double_swords.jpg">
     </div>
     <!-- Credit -->
     <div class='credit'>

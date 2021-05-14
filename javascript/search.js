@@ -2,27 +2,10 @@
 $(function () {
     // $(document).tooltip();
     var availableGundam = [
-        { link: "./gunpla/test_gunpla.html", label: "RX-78-2 Gundam (Beyond Global), Bandai Spirits HG 1/144"},
-        { link: "https://hopkins.irish", label: "Asp"},
-        { link: "https://hopkins.irish", label: "BASIC"},
-        { link: "https://hopkins.irish", label: "C"},
-        { link: "https://hopkins.irish", label: "C++"},
-        { link: "https://hopkins.irish", label: "Clojure"},
-        { link: "https://hopkins.irish", label: "COBOL"},
-        { link: "https://hopkins.irish", label: "ColdFusion"},
-        { link: "https://hopkins.irish", label: "Erlang"},
-        { link: "https://hopkins.irish", label: "Fortran"},
-        { link: "https://hopkins.irish", label: "Groovy"},
-        { link: "https://hopkins.irish", label: "Haskell"},
-        { link: "https://hopkins.irish", label: "Java"},
-        { link: "https://hopkins.irish", label: "JavaScript"},
-        { link: "https://hopkins.irish", label: "Lisp"},
-        { link: "https://hopkins.irish", label: "Perl"},
-        { link: "https://hopkins.irish", label: "PHP"},
-        { link: "https://hopkins.irish", label: "Python"},
-        { link: "https://hopkins.irish", label: "Ruby"},
-        { link: "https://hopkins.irish", label: "Scala"},
-        { link: "https://hopkins.irish", label: "Scheme"}
+        { 
+            link: "./gunpla/test_gunpla.html", 
+            label: "RX-78-2 Gundam (Beyond Global), Bandai Spirits HG 1/144"
+        }
     ];
     $("#availableGundam").autocomplete({
         source: availableGundam,

@@ -1,12 +1,19 @@
 .threesixty-image-rotate {
   height: auto !important;
+  width: 600px !important;
+  border: black solid 2px;
+}
+@media all and (max-width: 600px) {
+  .threesixty-image-rotate {
+    width: 100% !important;
+  }
 }
 .threesixty-image-rotate .loading-spinner:after {
   background-image: url("../javascript/360view/images/icons/loading.gif");
 }
 
-.threesixty-image-rotate .images-display:hover {
-  cursor: grab;
+.threesixty-image-rotate:hover {
+  cursor: crosshair;
 }
 
 .threesixty-image-rotate .images-display .images-list {
