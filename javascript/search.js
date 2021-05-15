@@ -3,7 +3,7 @@ $(function () {
     // $(document).tooltip();
     var availableGundam = [
         { 
-            link: "./gunpla/test_gunpla.html", 
+            link: "../gunpla/rx_78_2_gundam_beyond_global_hg.html", 
             label: "RX-78-2 Gundam (Beyond Global), Bandai Spirits HG 1/144"
         }
     ];
