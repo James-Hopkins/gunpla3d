@@ -1,4 +1,6 @@
-Title: Gunpla3D.com Community Orientated Site For Viewing Gunpla
+## Gunpla3D.com Community Orientated Site For Viewing Gunpla
+
+---
 
 I created this site Gunpla3d.com with the intention of adding as many gunpla as I can with a 3Desque view to help beginners(like me) make decisions on which kits to buy / build.
 
