@@ -10,5 +10,7 @@ I'd like community feedback on the site and recommendations on what features it 
 
 An additional pain point I had was taking the actual photos I used a green screen fabric as a background so I could chroma key it out but it had fold marks and the color was not consistent because of this. On top of the green screen issues just rotating the gunpla was tough due to it falling at times and inconsitencies in angles. I have pre ordered a gunpla which should arrive in the coming months which has a base to make this easier. Any tips for this would be appreciated as well.
 
-The attached photo is my build, i'd like to panel line it but before I do a few tutorial videos would be needed as i'm worried I'll mess it up.
-If you think this a good idea feel free to comment / upvote.
+In have little time in my professional capacity to practice with novel front end applications so this site should also act as an outlet for that.
+some things I'd like to get working are:
+
+- CI straight to s3 bucket this site is hosted on.
