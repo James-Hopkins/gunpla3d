@@ -1,0 +1,76 @@
+.threesixty-image-rotate {
+  height: auto !important;
+  width: 600px !important;
+  border: black solid 2px;
+}
+@media all and (max-width: 600px) {
+  .threesixty-image-rotate {
+    width: 100% !important;
+  }
+}
+.threesixty-image-rotate .loading-spinner:after {
+  background-image: url("../javascript/360view/images/icons/loading.gif");
+}
+
+.threesixty-image-rotate:hover {
+  cursor: crosshair;
+}
+
+.threesixty-image-rotate .images-display .images-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.threesixty-image-rotate .images-display .images-list .images-display {
+  display: none;
+}
+
+.threesixty-image-rotate .images-display .images-list .images-display img {
+  width: 100%;
+  height: auto;
+}
+
+.active {
+  display: block !important;
+}
+
+.threesixty-image-rotate .navigation-bar-wrapper .navigation-bar div:hover {
+  cursor: pointer;
+}
+
+.threesixty-image-rotate
+  .navigation-bar-wrapper
+  .navigation-bar
+  .navigation-bar-next {
+  background-image: url("../javascript/360view/images/icons/next.png");
+}
+
+.threesixty-image-rotate
+  .navigation-bar-wrapper
+  .navigation-bar
+  .navigation-bar-previous {
+  background-image: url("../javascript/360view/images/icons/previous.png");
+}
+
+.threesixty-image-rotate
+  .navigation-bar-wrapper
+  .navigation-bar
+  .navigation-bar-play {
+  background-image: url("../javascript/360view/images/icons/play.png");
+}
+
+.navigation-bar-stop {
+  background-image: url("../javascript/360view/images/icons/stop.png") !important;
+}
+
+.threesixty-image-rotate
+  .navigation-bar-wrapper
+  .navigation-bar
+  .navigation-bar-resize {
+  background-image: url("../javascript/360view/images/icons/large-size.png");
+}
+
+.navigation-bar-resize-small-icon {
+  background-image: url("../javascript/360view/images/icons/small-size.png") !important;
+}
